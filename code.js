@@ -51,3 +51,24 @@ console.log(fiver([]) === null)
 console.log(fiver(2.3) === null)
 console.log(fiver(2.4) === null)
 console.log(fiver(Infinity) === null)
+
+
+
+
+let strings1 = ["2", "acs", "howdy"]
+let strings2 = ["2", "", "acs", "howdy", ""]
+
+function validateArray(strings) {
+    for (let i = 0; i < strings.length; i += 1) {
+        let item = strings[i]
+
+        if (item === "") {
+            return false
+        }
+    }
+
+    return true
+}
+
+console.log(validateArray(strings1) === true)
+console.log(validateArray(strings2) === false)
