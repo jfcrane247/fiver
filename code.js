@@ -1,11 +1,21 @@
+function isMultipleOf(num, modulus) {
+    return num % modulus === 0
+}
+
+console.log(isMultipleOf(6, 2) === true);
+console.log(isMultipleOf(3, 2) === false);
+console.log(isMultipleOf(15, 5) === true);
+console.log(isMultipleOf(17, 5) === false);
+
+
 function fiver(number) {
     //Guard Clause
     if (!Number.isInteger(number)) {
         return null
     }
 
-    let isEven = number % 2 === 0;
-    let isMultipleOfFive = number % 5 === 0;
+    let isEven = isMultipleOf(number, 2)
+    let isMultipleOfFive = isMultipleOf(number, 5)
 
     let output = null
     if (isEven) {
